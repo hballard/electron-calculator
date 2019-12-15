@@ -13,10 +13,11 @@ const useStyles = makeStyles({
 })
 
 export default function OperationButton(props: ButtonProps) {
+  const { children, ...newProps } = props
   const classes = useStyles()
   return (
-    <InputButton className={classes.root} {...props}>
-      {props.children}
+    <InputButton className={classes.root} {...newProps}>
+      {children}
     </InputButton>
   )
 }

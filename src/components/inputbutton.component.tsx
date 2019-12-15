@@ -14,6 +14,7 @@ const useStyles = makeStyles({
 })
 
 export default function InputButton(props: ButtonProps) {
+  const { children, ...newProps } = props
   const classes = useStyles()
   return (
     <Button
@@ -21,9 +22,9 @@ export default function InputButton(props: ButtonProps) {
       disableFocusRipple
       fullWidth
       variant="outlined"
-      {...props}
+      {...newProps}
     >
-      {props.children}
+      {children}
     </Button>
   )
 }
