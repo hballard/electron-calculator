@@ -5,7 +5,7 @@ import InputButton from './inputbutton.component'
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: 'rgb(243, 165, 0)',
+    backgroundColor: 'rgb(255, 162, 0)',
     '&:hover': {
       backgroundColor: 'rgb(226, 154, 1, .9)'
     }

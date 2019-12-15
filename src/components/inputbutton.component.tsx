@@ -4,8 +4,8 @@ import { Button, makeStyles, ButtonProps } from '@material-ui/core'
 const useStyles = makeStyles({
   root: {
     borderRadius: '0px',
-    padding: '6.1px',
-    borderColor: 'rgb(128, 128, 128)'
+    borderColor: 'rgb(128, 128, 128)',
+    minHeight: '71.5px'
   },
   label: {
     fontSize: '30px',

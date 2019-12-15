@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Grid, Container, makeStyles, CssBaseline } from '@material-ui/core'
+import { Grid, Container, makeStyles } from '@material-ui/core'
 
 import NumberButton from '../components/numberbutton.component'
 import OperationButton from '../components/operationbutton.component'
@@ -20,82 +20,79 @@ const createStyles = makeStyles({
 export default function MainUI() {
   const classes = createStyles()
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container className={classes.container}>
+    <Container className={classes.container}>
+      <Grid>
         <Grid>
-          <Grid>
-            <Display>Test</Display>
+          <Display>Test</Display>
+        </Grid>
+        <Grid container>
+          <Grid item xs>
+            <NumberButton>7</NumberButton>
           </Grid>
-          <Grid container>
-            <Grid item xs>
-              <NumberButton>7</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>8</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>9</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>/</OperationButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>AC</OperationButton>
-            </Grid>
+          <Grid item xs>
+            <NumberButton>8</NumberButton>
           </Grid>
-          <Grid container>
-            <Grid item xs>
-              <NumberButton>4</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>5</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>6</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>x</OperationButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>+/-</OperationButton>
-            </Grid>
+          <Grid item xs>
+            <NumberButton>9</NumberButton>
           </Grid>
-          <Grid container>
-            <Grid item xs>
-              <NumberButton>1</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>2</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <NumberButton>3</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>-</OperationButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>%</OperationButton>
-            </Grid>
+          <Grid item xs>
+            <OperationButton>/</OperationButton>
           </Grid>
-          <Grid container>
-            <Grid item classes={{ root: classes.zeroButton }}>
-              <NumberButton>0</NumberButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>.</OperationButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton>+</OperationButton>
-            </Grid>
-            <Grid item xs>
-              <OperationButton className={classes.equalsButton}>
-                =
-              </OperationButton>
-            </Grid>
+          <Grid item xs>
+            <OperationButton>AC</OperationButton>
           </Grid>
         </Grid>
-      </Container>
-    </React.Fragment>
+        <Grid container>
+          <Grid item xs>
+            <NumberButton>4</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <NumberButton>5</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <NumberButton>6</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>x</OperationButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>+/-</OperationButton>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item xs>
+            <NumberButton>1</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <NumberButton>2</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <NumberButton>3</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>-</OperationButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>%</OperationButton>
+          </Grid>
+        </Grid>
+        <Grid container>
+          <Grid item classes={{ root: classes.zeroButton }}>
+            <NumberButton>0</NumberButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>.</OperationButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton>+</OperationButton>
+          </Grid>
+          <Grid item xs>
+            <OperationButton className={classes.equalsButton}>
+              =
+            </OperationButton>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
