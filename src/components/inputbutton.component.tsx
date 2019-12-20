@@ -5,7 +5,7 @@ const useStyles = makeStyles({
   root: {
     borderRadius: '0px',
     borderColor: 'rgb(128, 128, 128)',
-    minHeight: '71.5px'
+    minHeight: '71.2px'
   },
   label: {
     fontSize: '30px',
