@@ -23,7 +23,7 @@ const controller = new CalculatorController()
 
 export default function MainUI() {
   const classes = createStyles()
-  const [displayValue, setDisplay] = useState(0)
+  const [displayValue, setDisplay] = useState('0')
   const [clearButtonLabel, setClearButtonLabel] = useState('AC')
   controller.init(setDisplay, setClearButtonLabel)
   return (

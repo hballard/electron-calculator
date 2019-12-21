@@ -4,11 +4,11 @@ export default class {
   currentValue?: string
   currentExpression: string[] = []
   clearFlag = false
-  setDisplayValue?: React.Dispatch<React.SetStateAction<number>>
+  setDisplayValue?: React.Dispatch<React.SetStateAction<string>>
   setClearButtonLabel?: React.Dispatch<React.SetStateAction<string>>
 
   init(
-    setDisplayValue: React.Dispatch<React.SetStateAction<number>>,
+    setDisplayValue: React.Dispatch<React.SetStateAction<string>>,
     setClearButtonLabel: React.Dispatch<React.SetStateAction<string>>
   ) {
     this.setDisplayValue = setDisplayValue
@@ -25,20 +25,20 @@ export default class {
       }
     }
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue(this.currentValue)
     }
   }
 
   onDecimalClick() {
     if (this.currentValue) {
-      if (this.currentValue.includes('.')) {
+      if (!this.currentValue.includes('.')) {
         this.currentValue = this.currentValue + '.'
       }
     } else {
       this.currentValue = '.'
     }
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue(this.currentValue)
     }
   }
 
@@ -47,7 +47,7 @@ export default class {
       const num = Number(this.currentValue)
       this.currentValue = String(num / 100)
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue(this.currentValue)
     }
     }
   }
@@ -57,7 +57,7 @@ export default class {
       const num = Number(this.currentValue)
       this.currentValue = String(-num)
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue(this.currentValue)
     }
     }
   }
@@ -83,7 +83,7 @@ export default class {
       }
     }
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue('0')
     }
   }
 
@@ -105,7 +105,7 @@ export default class {
       } else {
         this.currentValue = eval(this.currentExpression.join(""))  
         if (this.setDisplayValue) {
-          this.setDisplayValue(Number(this.currentValue))
+          this.setDisplayValue(String(this.currentValue))
         }
       }
       this.currentExpression.push(operator)
@@ -124,7 +124,7 @@ export default class {
     this.currentValue = eval(this.currentExpression.join(""))
     this.currentExpression = []
     if (this.setDisplayValue) {
-      this.setDisplayValue(Number(this.currentValue))
+      this.setDisplayValue(String(this.currentValue))
     }
   }
 }
