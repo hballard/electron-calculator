@@ -1,6 +1,6 @@
 {
   "name": "electron-calculator",
-  "productName": "electron-calculator",
+  "productName": "Heath's Calculator",
   "version": "1.0.0",
   "description": "My project to learn Electron",
   "main": ".webpack/main",
