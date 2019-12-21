@@ -14,6 +14,7 @@ let mainWindow: BrowserWindow | null
 function createWindow(): void {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    show: false,
     width: 562,
     height: 370,
     backgroundColor: '#808080',
@@ -36,6 +37,8 @@ function createWindow(): void {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  mainWindow.once('ready-to-show', () => { mainWindow?.show()})
 }
 
 // This method will be called when Electron has finished
