@@ -4,12 +4,10 @@ import { Button, makeStyles, ButtonProps } from '@material-ui/core'
 const useStyles = makeStyles({
   root: {
     borderRadius: '0px',
-    borderColor: 'rgb(128, 128, 128)',
     minHeight: '71.2px'
   },
   label: {
-    fontSize: '30px',
-    color: 'white'
+    fontSize: '30px'
   }
 })
 

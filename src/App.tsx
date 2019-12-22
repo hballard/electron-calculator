@@ -1,8 +1,9 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { CssBaseline } from '@material-ui/core'
+import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 
 import MainUI from './screens/mainui.screen'
+import { theme } from './App.theme'
 
 function App() {
   return (
@@ -13,4 +14,9 @@ function App() {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <MuiThemeProvider theme={theme}>
+    <App />
+  </MuiThemeProvider>,
+  document.getElementById('root')
+)

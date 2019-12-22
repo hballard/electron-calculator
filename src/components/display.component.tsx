@@ -3,8 +3,6 @@ import { makeStyles, Typography, TypographyProps } from '@material-ui/core'
 
 const useStyles = makeStyles({
   root: {
-    color: 'white',
-    backgroundColor: 'grey',
     padding: '12px'
   }
 })

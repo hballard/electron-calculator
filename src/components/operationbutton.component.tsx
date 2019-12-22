@@ -3,11 +3,13 @@ import { makeStyles, ButtonProps } from '@material-ui/core'
 
 import InputButton from './inputbutton.component'
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: 'rgb(255, 162, 0)',
-    '&:hover': {
-      backgroundColor: 'rgb(226, 154, 1, .9)'
+const useStyles = makeStyles(theme => {
+  return {
+    root: {
+      backgroundColor: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.light
+      }
     }
   }
 })
