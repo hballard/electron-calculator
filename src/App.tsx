@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom'
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 
 import MainUI from './screens/mainui.screen'
-import { theme } from './App.theme'
+import theme from './App.theme'
 
 function App() {
   return (

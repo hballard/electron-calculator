@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core'
 import { grey, orange } from '@material-ui/core/colors'
 
-export const theme = createMuiTheme({
+const theme = createMuiTheme({
   palette: {
     primary: {
       main: grey[500]
@@ -15,3 +15,5 @@ export const theme = createMuiTheme({
     }
   }
 })
+
+export default theme
