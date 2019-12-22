@@ -5,7 +5,7 @@ import NumberButton from '../components/numberbutton.component'
 import OperationButton from '../components/operationbutton.component'
 import Display from '../components/display.component'
 
-import withCalculatorController from '../controllers/calculator.controller'
+import withCalculatorContainer from '../containers/calculator.container'
 
 const createStyles = makeStyles({
   container: {
@@ -19,8 +19,8 @@ const createStyles = makeStyles({
   }
 })
 
-export default withCalculatorController(function MainUI(props) {
-  const { displayValue, clearButtonLabel, ...controller } = props
+export default withCalculatorContainer(function MainUI(props) {
+  const { displayValue, clearButtonLabel, ...container } = props
   const classes = createStyles()
   return (
     <Container className={classes.container}>
@@ -32,7 +32,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('7')
+                container.onDigitClick('7')
               }}
             >
               7
@@ -41,7 +41,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('8')
+                container.onDigitClick('8')
               }}
             >
               8
@@ -50,7 +50,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('9')
+                container.onDigitClick('9')
               }}
             >
               9
@@ -59,7 +59,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onOperatorClick('/')
+                container.onOperatorClick('/')
               }}
             >
               /
@@ -68,7 +68,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onClearClick()
+                container.onClearClick()
               }}
             >
               {clearButtonLabel}
@@ -79,7 +79,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('4')
+                container.onDigitClick('4')
               }}
             >
               4
@@ -88,7 +88,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('5')
+                container.onDigitClick('5')
               }}
             >
               5
@@ -97,7 +97,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('6')
+                container.onDigitClick('6')
               }}
             >
               6
@@ -106,7 +106,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onOperatorClick('*')
+                container.onOperatorClick('*')
               }}
             >
               x
@@ -115,7 +115,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onChangeSignClick()
+                container.onChangeSignClick()
               }}
             >
               +/-
@@ -126,7 +126,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('1')
+                container.onDigitClick('1')
               }}
             >
               1
@@ -135,7 +135,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('2')
+                container.onDigitClick('2')
               }}
             >
               2
@@ -144,7 +144,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('3')
+                container.onDigitClick('3')
               }}
             >
               3
@@ -153,7 +153,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onOperatorClick('-')
+                container.onOperatorClick('-')
               }}
             >
               -
@@ -162,7 +162,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onPercentClick()
+                container.onPercentClick()
               }}
             >
               %
@@ -173,7 +173,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item classes={{ root: classes.zeroButton }}>
             <NumberButton
               onClick={() => {
-                controller.onDigitClick('0')
+                container.onDigitClick('0')
               }}
             >
               0
@@ -182,7 +182,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onDecimalClick()
+                container.onDecimalClick()
               }}
             >
               .
@@ -191,7 +191,7 @@ export default withCalculatorController(function MainUI(props) {
           <Grid item xs>
             <OperationButton
               onClick={() => {
-                controller.onOperatorClick('+')
+                container.onOperatorClick('+')
               }}
             >
               +
@@ -201,7 +201,7 @@ export default withCalculatorController(function MainUI(props) {
             <OperationButton
               className={classes.equalsButton}
               onClick={() => {
-                controller.onEqualsClick()
+                container.onEqualsClick()
               }}
             >
               =

@@ -14,17 +14,17 @@ interface IWrappedComponentProps {
   onEqualsClick: () => void;
 }
 
-interface IwithCalculatorControllerState {
+interface IwithCalculatorContainerState {
   displayValue: string;
   clearButtonLabel: string;
 }
 
-export default function withCalculatorController(
+export default function withCalculatorContainer(
   WrappedComponent: React.FunctionComponent<IWrappedComponentProps>
 ) {
-  return class Controller extends React.Component<
+  return class Container extends React.Component<
     {},
-    IwithCalculatorControllerState
+    IwithCalculatorContainerState
   > {
     currentValue: string | undefined
     currentExpression: string[] = []
