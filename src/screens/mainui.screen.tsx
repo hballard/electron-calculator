@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid, Container, makeStyles } from '@material-ui/core'
 
 import NumberButton from '../components/numberbutton.component'
 import OperationButton from '../components/operationbutton.component'
 import Display from '../components/display.component'
 
-import CalculatorController from '../controllers/calculator.controller'
+import withCalculatorController from '../controllers/calculator.controller'
 
 const createStyles = makeStyles({
   container: {
@@ -19,13 +19,9 @@ const createStyles = makeStyles({
   }
 })
 
-const controller = new CalculatorController()
-
-export default function MainUI() {
+export default withCalculatorController(function MainUI(props) {
+  const { displayValue, clearButtonLabel, ...controller } = props
   const classes = createStyles()
-  const [displayValue, setDisplay] = useState('0')
-  const [clearButtonLabel, setClearButtonLabel] = useState('AC')
-  controller.init(setDisplay, setClearButtonLabel)
   return (
     <Container className={classes.container}>
       <Grid>
@@ -215,4 +211,4 @@ export default function MainUI() {
       </Grid>
     </Container>
   )
-}
+})
