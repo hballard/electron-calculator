@@ -7,15 +7,21 @@ import Display from '../components/display.component'
 
 import withCalculatorContainer from '../containers/calculator.container'
 
-const createStyles = makeStyles({
-  container: {
-    padding: 0
-  },
-  zeroButton: {
-    width: '225px'
-  },
-  equalsButton: {
-    backgroundColor: 'rgb(204, 204, 204)'
+const createStyles = makeStyles(theme => {
+  return {
+    container: {
+      padding: 0
+    },
+    zeroButton: {
+      width: '225px'
+    },
+    equalsButton: {
+      backgroundColor: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.primary.light
+      },
+      color: 'rgb(0,0,0)'
+    }
   }
 })
 
