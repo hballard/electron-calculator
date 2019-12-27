@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { Button, makeStyles, ButtonProps } from '@material-ui/core'
 
 const useStyles = makeStyles({

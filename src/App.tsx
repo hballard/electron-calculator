@@ -1,5 +1,5 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 
 import MainUI from './screens/mainui.screen'

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { makeStyles, ButtonProps } from '@material-ui/core'
 
 import InputButton from './inputbutton.component'
