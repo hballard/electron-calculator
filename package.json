@@ -103,6 +103,7 @@
     "css-loader": "^3.3.0",
     "electron": "7.1.4",
     "node-loader": "^0.6.0",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "v8-compile-cache": "^2.1.0"
   }
 }

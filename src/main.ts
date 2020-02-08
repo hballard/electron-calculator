@@ -1,4 +1,5 @@
 import { app, BrowserWindow } from 'electron'
+import 'v8-compile-cache'
 declare let MAIN_WINDOW_WEBPACK_ENTRY: any
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
