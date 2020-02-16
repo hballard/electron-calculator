@@ -40,7 +40,9 @@ function createWindow(): void {
   })
 
   // Don't show window until app is ready to render
-  mainWindow.once('ready-to-show', () => { mainWindow?.show()})
+  mainWindow.once('ready-to-show', () => {
+    mainWindow?.show()
+  })
 }
 
 // This method will be called when Electron has finished
