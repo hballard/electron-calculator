@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron'
 import 'v8-compile-cache'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let MAIN_WINDOW_WEBPACK_ENTRY: any
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.

@@ -1,28 +1,28 @@
 import { useState } from 'react'
 
 interface IHandler {
-  onDigitClick: (digit: string) => void;
-  onDecimalClick: () => void;
-  onPercentClick: () => void;
-  onChangeSignClick: () => void;
-  onClearClick: () => void;
-  onOperatorClick: (operator: string) => void;
-  onEqualsClick: () => void;
+  onDigitClick: (digit: string) => void
+  onDecimalClick: () => void
+  onPercentClick: () => void
+  onChangeSignClick: () => void
+  onClearClick: () => void
+  onOperatorClick: (operator: string) => void
+  onEqualsClick: () => void
 }
 
 interface IPartialCalculatorState {
-  currentValue?: string;
-  currentExpression?: string[];
-  clearFlag?: boolean;
-  displayValue?: string;
-  clearButtonLabel?: string;
+  currentValue?: string
+  currentExpression?: string[]
+  clearFlag?: boolean
+  displayValue?: string
+  clearButtonLabel?: string
 }
 
 interface ICalculatorState extends IPartialCalculatorState {
-  currentExpression: string[];
-  clearFlag: boolean;
-  displayValue: string;
-  clearButtonLabel: string;
+  currentExpression: string[]
+  clearFlag: boolean
+  displayValue: string
+  clearButtonLabel: string
 }
 
 export default function useCalculatorState(): [ICalculatorState, IHandler] {
